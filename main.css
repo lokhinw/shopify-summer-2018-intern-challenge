@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url('Helvetica.ttf'))
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica;
+  background: #000639;
+  color: #fff;
+}
+
+h1 {
+  font-size: 24px;
+  padding: 16px 0;
+  border-bottom: 4px solid #7AB55C;
+}
+
+p {
+  font-size: 16px;
+}
+
+.unsubscribe {
+  color: #fff;
+  position: absolute;
+  align-self: center;
+  bottom: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+
+@media (min-width:768px) {
+  .container {
+    width: 750px
+  }
+}
+
+@media (min-width:992px) {
+  .container {
+    width: 970px
+  }
+}
+
+@media (min-width:1200px) {
+  .container {
+    width: 1170px
+  }
+}
