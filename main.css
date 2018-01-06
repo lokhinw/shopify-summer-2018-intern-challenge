@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Helvetica';
-  src: url('Helvetica.ttf'))
+  src: url('Helvetica.ttf');
 }
 
 body {
@@ -10,24 +10,42 @@ body {
   color: #fff;
 }
 
+#main {
+  min-height: 100vh;
+  position: relative;
+}
+
 h1 {
   font-size: 24px;
-  padding: 16px 0;
+  margin: 36px 0;
+}
+
+h1:after {
+  content: "";
+  display: block;
+  margin-top: 16px;
+  width: 36px;
   border-bottom: 4px solid #7AB55C;
 }
 
 p {
-  font-size: 16px;
+  margin-top: 0;
+  font-size: 20px;
 }
 
-input, button[type="submit"] {
+input, button[type="submit"], select {
   font-size: 16px;
   padding: 16px;
   border-radius: 4px;
+  border: 1px solid #7D7D7D;
   outline: none;
   color: #7B7B7B;
   width: 100%;
   box-sizing: border-box;
+}
+
+#email {
+  margin-bottom: 16px;
 }
 
 .row {
@@ -37,7 +55,7 @@ input, button[type="submit"] {
 
 .col-4 {
   float: left;
-  width: 33.33%;
+  width: 100%;
   padding-right: 8px;
   padding-left: 8px;
   box-sizing: border-box;
@@ -45,7 +63,7 @@ input, button[type="submit"] {
 
 .col-8 {
   float: left;
-  width: 66.67%;
+  width: 100%;
   padding-right: 8px;
   padding-left: 8px;
   box-sizing: border-box;
@@ -55,8 +73,16 @@ button[type="submit"] {
   background: #5c6ac4;
   color: #fff;
   font-weight: 700;
-  margin-top: 24px;
+  margin: 16px 0 36px 0;
   border: none;
+}
+
+#error-message {
+  display: none;
+  margin: 8px 0 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #C23628;
 }
 
 .unsubscribe {
@@ -78,6 +104,15 @@ button[type="submit"] {
 @media (min-width:768px) {
   .container {
     width: 750px
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-8 {
+    width: 66.67%;
+  }
+  #email {
+    margin-bottom: 0;
   }
 }
 

@@ -9,23 +9,30 @@
 
 <body>
   <section id="main">
-  <div class="container">
-    <h1>Stay up to date with ecommerce trends<br>with Shopify's newsletter</h1>
-    <p>Subscribe for free marketing tips</p>
-    <form action="" method="post">
-      <div class="row">
-    <div class="col-8">
-    <input type="email" placeholder="Email Address">
-  </div>
-    <div class="col-4">
-    <input type="text" placeholder="">
+    <div class="container">
+      <h1>Stay up to date with ecommerce trends<br> with Shopify's newsletter</h1>
+      <p>Subscribe for free marketing tips</p>
+      <form method="post" onsubmit="validateForm(); return false;">
+        <div class="row">
+          <div class="col-8">
+            <input id="email" type="text" placeholder="Email Address">
+          </div>
+          <div class="col-4">
+            <select id="dropdown" name="dropdown" id="dropdown">
+                  	<option value="" disabled selected>Interested in...</option>
+                  	<option value="option 1">option 1</option>
+                  	<option value="option 2">option 2</option>
+                  	<option value="option 3">option 3</option>
+            </select>
+          </div>
+        </div>
+        <p id="error-message">Please enter a valid email address</p>
+        <button type="submit">Sign up now</button>
+      </form>
+      <a href="" class="unsubscribe">Unsubscribe</a>
     </div>
-    </div>
-    <button type="submit">Sign up now</button>
-    </form>
-    <a href="" class="unsubscribe">Unsubscribe</a>
-  </div>
   </section>
+  <script src="main.js"></script>
 </body>
 
 </html>
